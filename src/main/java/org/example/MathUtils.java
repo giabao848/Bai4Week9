@@ -3,6 +3,9 @@ package org.example;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
+import java.nio.file.Path;
+
 public class MathUtils {
     private static final Logger logger = LoggerFactory.getLogger(MathUtils.class);
 
@@ -20,6 +23,6 @@ public class MathUtils {
     }
     public String getFilePath() {
         // Cố tình dùng dấu gạch chéo ngược của Windows
-        return "logs\\test.txt";
+        return "logs" + File.separator + "text.txt";
     }
 }

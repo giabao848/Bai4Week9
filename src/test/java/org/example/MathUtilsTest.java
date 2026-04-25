@@ -2,6 +2,9 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+import java.nio.file.Path;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MathUtilsTest {
@@ -13,6 +16,7 @@ public class MathUtilsTest {
     @Test
     void testFilePath() {
         // Bài test này sẽ CHẠY ĐÚNG trên Windows nhưng LỖI trên Ubuntu/macOS
-        assertEquals("logs\\test.txt", math.getFilePath());
+        String expectedPath = "logs" + File.separator + "text.txt";
+        assertEquals(expectedPath ,math.getFilePath());
     }
 }
